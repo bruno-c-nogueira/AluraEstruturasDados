@@ -1,4 +1,3 @@
-import java.lang.IllegalArgumentException
 
 class Array<T> {
     private var size = 0

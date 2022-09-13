@@ -33,15 +33,4 @@ class LinkedListTest{
         linkedList.insertAt(4,4)
         println(linkedList)
     }
-
-    @Test
-    fun `remove first element`(){
-        val linkedList = LinkedList<Int>()
-        linkedList.append2(1)
-        linkedList.append2(2)
-        linkedList.append2(3)
-        println(linkedList)
-        linkedList.pop()
-        println(linkedList)
-    }
 }
