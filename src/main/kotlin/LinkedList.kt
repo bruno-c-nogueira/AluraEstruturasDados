@@ -68,6 +68,24 @@ class LinkedList<T>() {
             tail = null
         }
 
+
+    }
+    fun removeAt(position: Int) {
+        if (position > size) {
+            throw IllegalArgumentException("Invalid position")
+        }
+        if (position == 0) {
+            head = head?.next
+            size--
+        } else {
+            val nodeAt = nodeAt(position - 1)
+            nodeAt?.next = nodeAt?.next?.next
+            size--
+        }
+
+        if (size == 0) {
+            tail = null
+        }
     }
 
     override fun toString(): String {
