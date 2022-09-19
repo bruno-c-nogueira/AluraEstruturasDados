@@ -67,9 +67,8 @@ class LinkedList<T>() {
         if (size == 0) {
             tail = null
         }
-
-
     }
+
     fun removeAt(position: Int) {
         if (position > size) {
             throw IllegalArgumentException("Invalid position")
