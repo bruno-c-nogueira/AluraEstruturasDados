@@ -58,15 +58,17 @@ class LinkedList<T>() {
         nodeAt?.next = newNode
     }
 
-    fun pop() {
+    fun pop(): T? {
         if (size == 0) {
             throw java.lang.IllegalArgumentException("Empty list")
         }
+        val itemRemoved = head?.value
         head = head?.next
         size--
         if (size == 0) {
             tail = null
         }
+        return itemRemoved
     }
 
     fun removeAt(position: Int) {
